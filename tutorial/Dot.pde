@@ -10,7 +10,7 @@ class Dot {
   Dot() { 
 
     brain = new Brain(400);
-    pos = new PVector( width/2, height /2);
+    pos = new PVector( width/2, height -10);
     vel = new PVector ( 0, 0 ) ;
     acc = new PVector(0, 0);
   } 
@@ -49,4 +49,8 @@ class Dot {
       }
     }
   }
-}
+
+  void calculateFitness() { 
+    float distanceToGoal = dist(pos.x, pos.y, goal.x, goal.y); 
+    fitness = 1.0/(distanceToGoal * distanceToGoal);
+  }

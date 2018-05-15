@@ -24,4 +24,10 @@ class Population {
       dots[i].update();
     }
   }
+
+  void calculateFitness() { 
+    for ( int i = 0; i < dots.length; i ++) { 
+      dots[i].calculateFitness();
+    }
+  }
 }
