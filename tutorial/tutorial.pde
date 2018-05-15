@@ -1,14 +1,12 @@
-Dot test;
+Population test;
 
-void setup(){ 
-  size(800,800); 
-  test = new Dot(); 
-  
+void setup() { 
+  size(800, 800); 
+  test = new Population(100);
 } 
 
-void draw(){ 
+void draw() { 
   background(255); 
-  test.move(); 
-  test.show(); 
-  
+  test.update(); 
+  test.show();
 }
